@@ -44,4 +44,11 @@ describe('Deck', function () {
     expect(round.incorrectGuesses).to.deep.equal([1]);
   });
 
+  it('calculatePercentCorrect will return percent of correct guesses', () => {
+    round.takeTurn('wrong guess here');
+    expect(round.calculatePercentCorrect()).to.equal('You got 0% correct!');
+    round.takeTurn('array');
+    expect(round.calculatePercentCorrect()).to.equal('You got 50% correct!');
+  });
+
 });
