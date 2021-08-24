@@ -32,4 +32,13 @@ describe('Turn', function () {
   it('returnCard method should return the card', () => {
     expect(turn.returnCard()).to.deep.equal(card);
   });
+
+  it('evlauateGuess method should return true when guess is correct', () => {
+    expect(turn.evaluateGuess()).to.equal(true);
+  });
+
+  it('evaluateGuess method should return false when guess is incorrect', () => {
+    const turn = new Turn('worng guess here', card);
+    expect(turn.evaluateGuess()).to.equal(false);
+  });
 });
