@@ -51,4 +51,10 @@ describe('Deck', function () {
     expect(round.calculatePercentCorrect()).to.equal('You got 50% correct!');
   });
 
+  it('endRound will print message and percent to console', () => {
+    round.takeTurn('some wrong answer here');
+    round.takeTurn('array');
+    round.takeTurn('mutator method');
+    expect(round.endRound()).to.equal(`** Round over! ** You answered 67% of the questions correctly!`);
+  });
 });
