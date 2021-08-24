@@ -57,4 +57,9 @@ describe('Deck', function () {
     round.takeTurn('mutator method');
     expect(round.endRound()).to.equal(`** Round over! ** You answered 67% of the questions correctly!`);
   });
+
+  it('Should store the start time of the round', () => {
+    expect(round.startTime).to.equal(Date.now());
+  });
+
 });
