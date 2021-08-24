@@ -22,4 +22,8 @@ describe('Deck', function () {
     expect(deck).to.be.an.instanceof(Deck);
   });
 
-})
+  it('Should be able to calculate how many cards are in the deck', () => {
+    deck.countCards();
+    expect(deck.deckLength).to.equal(3);
+  });
+});
