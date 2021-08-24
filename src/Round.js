@@ -28,8 +28,11 @@ class Round {
   }
 
   calculateGameTime() {
-    // console.log(this.startTime);
-
+    let millisecs = (Date.now() - this.startTime);
+    let seconds = Math.round((millisecs / 1000) % 60);
+    let minutes = Math.round(millisecs / 60000);
+    let totalTime = `${minutes}:${seconds}`;
+    return totalTime;
   }
 
   endRound() {
