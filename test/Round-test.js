@@ -28,4 +28,20 @@ describe('Deck', function () {
     expect(round.returnCurrentCard()).to.deep.equal(card1);
   });
 
+  it('takeTurn should update turn count after guess', () => {
+    expect(round.turns).to.equal(0);
+    round.takeTurn('just some guess here');
+    expect(round.turns).to.equal(1);
+  });
+
+  it('takeTurn should make the next card the current', () => {
+    round.takeTurn('just another guess here');
+    expect(round.returnCurrentCard()).to.deep.equal(card2);
+  });
+
+  it('takeTurn should store incorrect guess by id', () => {
+    round.takeTurn('yet another guess here');
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+  });
+
 });
