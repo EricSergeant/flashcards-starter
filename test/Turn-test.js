@@ -20,4 +20,9 @@ describe('Turn', function () {
     expect(turn).to.be.an.instanceof(Turn);
   });
 
+  it('Should be instatiated with two arguments', () => {
+    expect(turn).to.have.property('guess');
+    expect(turn).to.have.property('card');
+  });
+
 });
