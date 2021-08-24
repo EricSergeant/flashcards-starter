@@ -21,6 +21,8 @@ class Game {
     let deck = new Deck(cards);
     let round = new Round(deck);
     this.currentRound = round;
+    this.printMessage(deck);
+    this.printQuestion(round);
   }
 
   printMessage(deck, round) {
