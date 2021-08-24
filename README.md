@@ -1,24 +1,32 @@
 # FlashCards Starter Kit
 
+## Description
+Get yourself ready for the big test or interview without the hassle of engaging graphics and flashy colors by running this flashcard application through your terminal!  This app runs through 30 flashcards and gives feedback on whether or not the correct answer was selected.  After running through the cards, you'll see the percentage correct as well as the amount of time you took to run through the cards. Set a personal record and try to beat it!
+
+## Gameplay
+You'll be propmted by each question to select an answer, make your choice, and receive feedback.
+
+![flash cards example gif] ()
+
+You can update the app with your own questions and answers by replacing or updating the objects in the data.js file.
+
+## Technologies Used
+- **JavaScript** - all coding done in JavaScript, using ES6 class and Test Driven Development (TDD).
+- **Mocha** - the testing framework used for the TDD.
+- **Chai** - the assertion library used with Mocha.
+- **eslint** - the linter used for all *.js and *test.js files.
+- **GitHub** - used to hold the reposity and housed the project board/issues log.  
+
+## How To Install and Play
+
+
 ## Fork This Repo
 
 On the top right corner of this page, click the **Fork** button.
 
 ## Setup
 
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
+Clone down the forked repo (from your GitHub). 
 
 Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
 
