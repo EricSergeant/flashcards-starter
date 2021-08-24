@@ -25,7 +25,8 @@ class Game {
     this.printQuestion(round);
   }
 
-  printMessage(deck, round) {
+  printMessage(deck) {
+    // eslint-disable-next-line no-console
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
