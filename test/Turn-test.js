@@ -38,7 +38,16 @@ describe('Turn', function () {
   });
 
   it('evaluateGuess method should return false when guess is incorrect', () => {
-    const turn = new Turn('worng guess here', card);
+    const turn = new Turn('wrong guess here', card);
     expect(turn.evaluateGuess()).to.equal(false);
+  });
+
+  it('giveFeedback method should return correct! when right', () => {
+    expect(turn.giveFeedback()).to.equal('correct!');
+  });
+
+  it('giveFeedback method should return incorrect! when wrong', () => {
+    const turn = new Turn('wrong guess here', card);
+    expect(turn.giveFeedback()).to.equal('incorrect!');
   });
 });
