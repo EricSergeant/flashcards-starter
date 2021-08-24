@@ -23,14 +23,20 @@ class Round {
 
   calculatePercentCorrect() {
     let correct = this.turns - this.incorrectGuesses.length;
-    let percent = (correct / this.turns) * 100;
-    return `You got ${Math.round(percent)}% correct!`;
+    let percentCorrect = (correct / this.turns) * 100;
+    return percentCorrect;
+  }
+
+  calculateGameTime() {
+    // console.log(this.startTime);
+
   }
 
   endRound() {
     let finalCorrect = this.turns - this.incorrectGuesses.length;
     let finalPercent = (finalCorrect / this.turns) * 100;
-    return `** Round over! ** You answered ${Math.round(finalPercent)}% of the questions correctly!`;
+    let time = this.calculateGameTime();
+    return `** Round over! ** You answered ${Math.round(finalPercent)}% of the questions correctly! Round time: ${time}`;
   }
 }
 

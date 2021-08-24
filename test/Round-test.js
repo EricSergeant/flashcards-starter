@@ -46,20 +46,25 @@ describe('Deck', function () {
 
   it('calculatePercentCorrect will return percent of correct guesses', () => {
     round.takeTurn('wrong guess here');
-    expect(round.calculatePercentCorrect()).to.equal('You got 0% correct!');
     round.takeTurn('array');
-    expect(round.calculatePercentCorrect()).to.equal('You got 50% correct!');
+    const correctAverage = round.calculatePercentCorrect();
+    expect(correctAverage).to.equal(50);
   });
 
   it('endRound will print message and percent to console', () => {
     round.takeTurn('some wrong answer here');
     round.takeTurn('array');
-    round.takeTurn('mutator method');
-    expect(round.endRound()).to.equal(`** Round over! ** You answered 67% of the questions correctly!`);
+    const endMessage = round.endRound();
+    expect(endMessage).to.be.a('string');
   });
 
   it('Should store the start time of the round', () => {
     expect(round.startTime).to.equal(Date.now());
+  });
+
+  it('Should be able to calculate total round time', () => {
+    expect(round.calculateGameTime).to.be.a('function');
+    expect(round.calculateGameTime()).to.be.a('string');
   });
 
 });
