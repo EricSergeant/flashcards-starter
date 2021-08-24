@@ -18,4 +18,13 @@ describe('Game', function () {
     expect(game).to.be.an.instanceof(Game);
   });
 
+  it('Should be able to start a new Game', () => {
+    game.startGame();
+    expect(game.currentRound.deck.cards.length).to.equal(30);
+  })
+
+  it('Should track the current round', () => {
+    game.startGame();
+    expect(game.currentRound).to.be.an.instanceof(Round);
+  })
 })
