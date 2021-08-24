@@ -24,4 +24,8 @@ describe('Deck', function () {
     expect(round).to.be.an.instanceof(Round);
   });
 
-})
+  it('returnCurrentCard should be the first card int he deck at start of round', () => {
+    expect(round.returnCurrentCard()).to.deep.equal(card1);
+  });
+
+});
