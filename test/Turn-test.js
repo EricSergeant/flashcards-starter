@@ -25,4 +25,11 @@ describe('Turn', function () {
     expect(turn).to.have.property('card');
   });
 
+  it('returnGuess method should return player guess', () => {
+    expect(turn.returnGuess()).to.equal('array');
+  });
+
+  it('returnCard method should return the card', () => {
+    expect(turn.returnCard()).to.deep.equal(card);
+  });
 });
