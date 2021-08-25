@@ -40,8 +40,12 @@ class Round {
     let finalPercent = (finalCorrect / this.turns) * 100;
     let time = this.calculateGameTime();
     // eslint-disable-next-line no-console
-    console.log(`** Round over! ** You answered ${Math.round(finalPercent)}% of the questions correctly! Round time: ${time}`);
-    return `** Round over! ** You answered ${Math.round(finalPercent)}% of the questions correctly! Round time: ${time}`;
+    console.log(`** Round over! ** 
+      You answered ${Math.round(finalPercent)}% of the questions correctly! 
+      Round time: ${time}`);
+    return `** Round over! ** 
+      You answered ${Math.round(finalPercent)}% of the questions correctly! 
+      Round time: ${time}`;
   }
 }
 

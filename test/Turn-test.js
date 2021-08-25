@@ -9,6 +9,7 @@ describe('Turn', function () {
   let card;
   beforeEach(() => {
     turn = new Turn('array', card);
+    // eslint-disable-next-line max-len
     card = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
   })
 
