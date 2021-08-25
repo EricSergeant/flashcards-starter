@@ -6,6 +6,7 @@ const Card = require('../src/Card');
 describe('Card', function () {
   let card;
   beforeEach(() => {
+    // eslint-disable-next-line max-len
     card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
   });
 
@@ -18,6 +19,7 @@ describe('Card', function () {
   });
 
   it('should store a question', function () {
+    // eslint-disable-next-line max-len
     expect(card.question).to.equal('What allows you to define a set of related information using key-value pairs?');
   });
 

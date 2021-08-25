@@ -10,9 +10,14 @@ describe('Deck', function () {
   beforeEach(() => {
     cards = [card1, card2, card3];
     deck = new Deck(cards);
+    // eslint-disable-next-line max-len
     card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separated list of related values?', ['object', 'array', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card2 = new Card(2, 'What is a comma-separated list of related values?',
+      ['object', 'array', 'function'], 'array');
+    card3 = new Card(3,
+      'What type of prototype method directly modifies the existing array?',
+      ['mutator method', 'accessor method', 'iteration method'],
+      'mutator method');
     round = new Round(deck);
   });
 
@@ -24,6 +29,7 @@ describe('Deck', function () {
     expect(round).to.be.an.instanceof(Round);
   });
 
+  // eslint-disable-next-line max-len
   it('returnCurrentCard should be the first card int he deck at start of round', () => {
     expect(round.returnCurrentCard()).to.deep.equal(card1);
   });

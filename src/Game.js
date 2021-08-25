@@ -14,7 +14,8 @@ class Game {
   startGame() {
     let cards = [];
     prototypeQuestions.forEach(cardObj => {
-      let eachCard = new Card(cardObj.id, cardObj.question, cardObj.answers, cardObj.correctAnswer);
+      let eachCard = new Card(cardObj.id, cardObj.question,
+        cardObj.answers, cardObj.correctAnswer);
       cards.push(eachCard);
     });
 
@@ -25,8 +26,10 @@ class Game {
     this.printQuestion(round);
   }
 
-  printMessage(deck, round) {
-    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+  printMessage(deck) {
+    // eslint-disable-next-line no-console
+    console.log(`Welcome to FlashCards! 
+    You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
